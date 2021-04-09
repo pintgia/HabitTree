@@ -32,17 +32,13 @@
                                     <segue destination="iot-uN-zUG" kind="show" id="Cee-p7-vXG"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="GA6-iC-oj3">
-                                <rect key="frame" x="51" y="691" width="327" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s55-hd-hQB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="GfR-44-Rf6"/>
                     <connections>
-                        <outlet property="progressView" destination="GA6-iC-oj3" id="caC-DL-ak2"/>
+                        <outlet property="treeImage" destination="JP2-S9-Xh7" id="H5q-Zh-Lo9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCa-tp-EUF" sceneMemberID="firstResponder"/>
@@ -89,7 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Opg-Ri-dXi" userLabel="buttonSad">
-                                <rect key="frame" x="272" y="411" width="98" height="89"/>
+                                <rect key="frame" x="263" y="411" width="107" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="faceSad"/>
                             </button>
