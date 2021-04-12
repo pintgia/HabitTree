@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         treeImage.image = UIImage(named: "treeOne")
         
         // Do any additional setup after loading the view.
-       
+       print("tree")
     }
 
 
