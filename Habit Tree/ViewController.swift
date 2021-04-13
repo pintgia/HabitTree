@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var treeImage: UIImageView!
+    
     var imageNames = ["tree1", "tree2", "tree3"]
     
 
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
         }
         
         // Do any additional setup after loading the view.
-       print("tree")
+       
     }
     
 
