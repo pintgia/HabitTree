@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WrB-xe-REu">
-                                <rect key="frame" x="141" y="654" width="132" height="70"/>
+                                <rect key="frame" x="141" y="707" width="132" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.66641503570000005" green="0.77777725460000002" blue="0.58167380089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eat more fruit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ME6-Nt-xvR">
-                                <rect key="frame" x="132" y="670" width="151" height="29"/>
+                                <rect key="frame" x="132" y="642" width="151" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCa-tp-EUF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.10144927536237" y="0.6696428571428571"/>
+            <point key="canvasLocation" x="748" y="1"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7Oe-ZI-iel">
@@ -69,13 +69,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="43B-9K-eNV">
-                                <rect key="frame" x="38" y="233" width="278" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What did you do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMj-G5-6qg">
                                 <rect key="frame" x="38" y="154" width="193" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -114,7 +107,7 @@
                                     <action selector="buttonCompleteLog:" destination="8n0-4t-wEV" eventType="touchUpInside" id="tan-0f-qoe"/>
                                     <action selector="buttonCompleteLogPressed:" destination="8n0-4t-wEV" eventType="touchUpInside" id="EP5-gl-EsN"/>
                                     <action selector="completeLog:" destination="8n0-4t-wEV" eventType="touchUpInside" id="bLO-OO-hSa"/>
-                                    <segue destination="MLj-um-L00" kind="show" id="IFB-qq-ziY"/>
+                                    <segue destination="8n0-4t-wEV" kind="unwind" unwindAction="unwindToVC:" id="puo-vk-YUM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8is-Vb-AyN" userLabel="buttonHappy">
@@ -122,6 +115,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="faceHappy"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="43B-9K-eNV">
+                                <rect key="frame" x="38" y="237" width="278" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="actionInput:" destination="8n0-4t-wEV" eventType="editingDidEnd" id="Kqn-Um-klM"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l81-am-yLl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -155,6 +158,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Tree" id="dQU-hL-Iyj"/>
                     <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="pfY-Pr-TGA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.4039215686" green="0.4941176471" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
