@@ -32,13 +32,9 @@
                                     <segue destination="iot-uN-zUG" kind="show" id="Cee-p7-vXG"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eat more fruit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ME6-Nt-xvR">
-                                <rect key="frame" x="132" y="642" width="151" height="29"/>
-=======
+
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqd-Sl-JEY">
                                 <rect key="frame" x="184" y="753" width="46" height="60"/>
->>>>>>> d9acf9b325f8a96b9bde30a3d651c2fd0406ff59
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
