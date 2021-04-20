@@ -6,7 +6,6 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -54,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCa-tp-EUF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="1"/>
+            <point key="canvasLocation" x="1058" y="-537"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7Oe-ZI-iel">
@@ -106,7 +105,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooB-n5-Suv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="8n0-4t-wEV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1586.9565217391305" y="0.6696428571428571"/>
+            <point key="canvasLocation" x="1897" y="-537"/>
         </scene>
         <!--Tree View-->
         <scene sceneID="gLp-dP-Hhb">
@@ -123,69 +122,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ErJ-jh-XBj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264" y="1"/>
+            <point key="canvasLocation" x="2572" y="-537"/>
         </scene>
-        <!--My Trees-->
+        <!--View Controller-->
         <scene sceneID="Ndu-ho-VF4">
             <objects>
                 <viewController id="28e-Hh-05H" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yhm-aU-CN7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="P6e-Ng-Ixb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="XjL-fM-3rh">
+                        <imageReference key="image" image="plus.app" catalog="system" symbolScale="large" renderingMode="template"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="96L-o5-Jms"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2f4-RT-WJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-557" y="733"/>
+        </scene>
+        <!--My Trees-->
+        <scene sceneID="cPZ-Nv-70J">
+            <objects>
+                <viewController id="vzT-Fd-7oH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Whn-qA-6vF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Z7f-Pn-PYS">
-                                <rect key="frame" x="0.0" y="157" width="414" height="656"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cXI-oc-rG6">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7Vh-9H-Y5T">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zlt-qL-HBj">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# Trees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApX-r8-iPR">
-                                <rect key="frame" x="43" y="66" width="256" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# Trees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye5-a2-ObM">
+                                <rect key="frame" x="42" y="65" width="256" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ag9-RM-MGm">
+                                <rect key="frame" x="0.0" y="138" width="414" height="656"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="run-lv-I2t">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="P6e-Ng-Ixb"/>
+                        <viewLayoutGuide key="safeArea" id="Eyx-C6-RQV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Z7f-Pn-PYS" firstAttribute="leading" secondItem="P6e-Ng-Ixb" secondAttribute="leading" id="Bmw-HF-w1P"/>
-                            <constraint firstItem="Z7f-Pn-PYS" firstAttribute="top" secondItem="P6e-Ng-Ixb" secondAttribute="top" id="Ip7-PH-m5d"/>
-                            <constraint firstItem="P6e-Ng-Ixb" firstAttribute="bottom" secondItem="Z7f-Pn-PYS" secondAttribute="bottom" id="Mgf-OI-UeU"/>
-                            <constraint firstItem="P6e-Ng-Ixb" firstAttribute="trailing" secondItem="Z7f-Pn-PYS" secondAttribute="trailing" id="YP3-ys-UR5"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Trees" id="XjL-fM-3rh">
-                        <imageReference key="image" image="command.circle" catalog="system" symbolScale="large" renderingMode="template"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="My Trees" image="command.circle" catalog="system" id="9pm-Ci-N8l"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2f4-RT-WJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJc-Jg-qDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-467" y="717"/>
+            <point key="canvasLocation" x="212" y="717"/>
         </scene>
         <!--Home-->
         <scene sceneID="gxs-io-A7h">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ee3-09-PcZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="leB-Ys-YDk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dDT-FB-scS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVe-rV-UY9">
+                                <rect key="frame" x="177" y="57" width="60" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xmz-ST-bah"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -193,8 +203,9 @@
                         <imageReference key="image" image="house.circle" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ee3-09-PcZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1587" y="721"/>
+            <point key="canvasLocation" x="-1265.217391304348" y="716.51785714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ndQ-NS-6Kb">
@@ -208,6 +219,8 @@
                     <connections>
                         <segue destination="leB-Ys-YDk" kind="relationship" relationship="viewControllers" id="Gbp-DY-eqO"/>
                         <segue destination="28e-Hh-05H" kind="relationship" relationship="viewControllers" id="IOj-6e-a7l"/>
+                        <segue destination="vzT-Fd-7oH" kind="relationship" relationship="viewControllers" id="MD0-sW-JXD"/>
+                        <segue destination="28e-Hh-05H" kind="show" id="zxJ-2W-pRe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltt-0k-Fbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -215,11 +228,15 @@
             <point key="canvasLocation" x="-817" y="1"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IOj-6e-a7l"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="command" catalog="system" width="128" height="115"/>
         <image name="command.circle" catalog="system" width="128" height="121"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="house.circle" catalog="system" width="128" height="121"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

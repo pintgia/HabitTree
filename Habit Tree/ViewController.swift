@@ -8,6 +8,9 @@
 import UIKit
 import SwiftUI
 
+
+
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var treeImage: UIImageView!
@@ -15,12 +18,14 @@ class ViewController: UIViewController {
     var imageNames = ["tree1", "tree2", "tree3"]
     
     
-    
 
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
+        
+        
+      /*  super.viewDidLoad()
         treeImage.image = UIImage(named: "treeOne")
         for imageName in imageNames {
             UIView.transition(with: treeImage, duration: 2.0, options: .transitionCrossDissolve, animations:  {
@@ -30,7 +35,7 @@ class ViewController: UIViewController {
         }
         
         // Do any additional setup after loading the view.
-       
+       */
     }
     @IBAction func unwindToVC(_ unwindSegue: UIStoryboardSegue) {
        //let sourceViewController = unwindSegue.source
