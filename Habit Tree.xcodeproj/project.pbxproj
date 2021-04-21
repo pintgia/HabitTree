@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C013A252630B49F00D12BE6 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C013A242630B49F00D12BE6 /* SwiftUIView.swift */; };
 		6C180A1D26094A3B00C33DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C180A1C26094A3B00C33DAF /* AppDelegate.swift */; };
 		6C180A1F26094A3B00C33DAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C180A1E26094A3B00C33DAF /* SceneDelegate.swift */; };
 		6C180A2126094A3B00C33DAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C180A2026094A3B00C33DAF /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C013A242630B49F00D12BE6 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		6C180A1926094A3B00C33DAF /* Habit Tree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit Tree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C180A1C26094A3B00C33DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C180A1E26094A3B00C33DAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				6C180A1C26094A3B00C33DAF /* AppDelegate.swift */,
 				6C180A1E26094A3B00C33DAF /* SceneDelegate.swift */,
 				6C180A2026094A3B00C33DAF /* ViewController.swift */,
+				6C013A242630B49F00D12BE6 /* SwiftUIView.swift */,
 				6C180A2226094A3B00C33DAF /* Main.storyboard */,
 				6C180A2526094A3C00C33DAF /* Assets.xcassets */,
 				6C180A2726094A3C00C33DAF /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				6C180A2126094A3B00C33DAF /* ViewController.swift in Sources */,
 				6C180A1D26094A3B00C33DAF /* AppDelegate.swift in Sources */,
+				6C013A252630B49F00D12BE6 /* SwiftUIView.swift in Sources */,
 				6C180A1F26094A3B00C33DAF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

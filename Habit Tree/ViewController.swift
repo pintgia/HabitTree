@@ -18,8 +18,6 @@ class ViewController: UIViewController {
     var imageNames = ["tree1", "tree2", "tree3"]
     
     
-
-    
     
     override func viewDidLoad() {
         
