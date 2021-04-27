@@ -7,19 +7,31 @@
 
 import Foundation
 
+
+
 struct Tree {
     // CS: There are referred to as "tables" or "models" in database vernacular
     // Make sure each models have ids
     var id: Int
     var name: String
-    var actions: [Action: Bool]
+   // var actions: [Action: Bool]
     var currentStage: Int
     var totalStages: Int
+    var habitStreak: Bool
+}
+
+var treeList: [Tree] = []
+
+
+struct habitStreak {
+    var streakCount: Int
 }
 
 struct Action: Hashable {
     var id: Int
+    var note: String
 }
+
 
 class DataManager {
     
