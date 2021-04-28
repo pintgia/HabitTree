@@ -75,6 +75,7 @@ class FormViewController: UIViewController {
         } else {
             if let newTreeText = newTreeTextField.text {
                 dvc.userInput = newTreeText
+                //Create new tree and display image to home
             }
         }
         
