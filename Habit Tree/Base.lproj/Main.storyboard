@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uag-3w-DJC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uag-3w-DJC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -179,13 +179,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1gQ-bB-Jw4">
-                                <rect key="frame" x="38" y="96.5" width="338" height="32"/>
+                                <rect key="frame" x="38" y="96.5" width="171" height="32"/>
                                 <segments>
                                     <segment title="Log Action"/>
                                     <segment title="New Tree"/>
                                 </segments>
                                 <connections>
-<<<<<<< Updated upstream
                                     <action selector="segmentedControlValueChanged:" destination="591-vX-PE7" eventType="valueChanged" id="AtY-ls-5fB"/>
                                 </connections>
                             </segmentedControl>
@@ -238,61 +237,23 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-=======
-                                    <action selector="switchViewActionWithSender:" destination="591-vX-PE7" eventType="valueChanged" id="Cko-q6-daI"/>
-                                    <action selector="switchViewForm:" destination="591-vX-PE7" eventType="valueChanged" id="R1A-4T-W4a"/>
-                                </connections>
-                            </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONP-cu-3la">
-                                <rect key="frame" x="35" y="163.5" width="341" height="618.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh9-Ga-Jbr">
-                                        <rect key="frame" x="99" y="393.5" width="143" height="36"/>
-                                        <color key="backgroundColor" systemColor="labelColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="tLh-3U-fW9"/>
-                                        </constraints>
-                                        <state key="normal" title="Save">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="bh9-Ga-Jbr" firstAttribute="centerX" secondItem="ONP-cu-3la" secondAttribute="centerX" id="1lZ-Gi-3sM"/>
-                                    <constraint firstAttribute="bottom" secondItem="bh9-Ga-Jbr" secondAttribute="bottom" constant="189" id="Lpr-dB-Jjc"/>
-                                    <constraint firstItem="bh9-Ga-Jbr" firstAttribute="leading" secondItem="ONP-cu-3la" secondAttribute="leading" constant="99" id="Val-wn-yTK"/>
-                                </constraints>
-                            </view>
->>>>>>> Stashed changes
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QuV-FO-rCz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-<<<<<<< Updated upstream
                             <constraint firstItem="QuV-FO-rCz" firstAttribute="trailing" secondItem="cMc-Gk-uVb" secondAttribute="trailing" constant="30" id="2cg-ji-8HX"/>
                             <constraint firstItem="bh9-Ga-Jbr" firstAttribute="top" secondItem="IYA-T1-84V" secondAttribute="bottom" constant="172.5" id="2ru-TA-O4p"/>
                             <constraint firstItem="IYA-T1-84V" firstAttribute="top" secondItem="1gQ-bB-Jw4" secondAttribute="bottom" constant="283.5" id="4eb-gM-AwE"/>
                             <constraint firstItem="bh9-Ga-Jbr" firstAttribute="leading" secondItem="QuV-FO-rCz" secondAttribute="leading" constant="136" id="FJx-2J-SVX"/>
+                            <constraint firstItem="QuV-FO-rCz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1gQ-bB-Jw4" secondAttribute="trailing" symbolic="YES" id="GW3-Jy-Vuu"/>
                             <constraint firstItem="cMc-Gk-uVb" firstAttribute="leading" secondItem="QuV-FO-rCz" secondAttribute="leading" constant="20" id="Kqu-ob-huB"/>
                             <constraint firstItem="QuV-FO-rCz" firstAttribute="trailing" secondItem="bh9-Ga-Jbr" secondAttribute="trailing" constant="135" id="LhO-o1-e5e"/>
                             <constraint firstItem="IYA-T1-84V" firstAttribute="top" secondItem="cMc-Gk-uVb" secondAttribute="bottom" constant="30" id="Ln0-BO-PXq"/>
-                            <constraint firstItem="QuV-FO-rCz" firstAttribute="trailing" secondItem="1gQ-bB-Jw4" secondAttribute="trailing" constant="38" id="XWa-ld-wAJ"/>
                             <constraint firstItem="IYA-T1-84V" firstAttribute="centerX" secondItem="byh-tX-OoT" secondAttribute="centerX" id="XZV-hU-qLo"/>
                             <constraint firstItem="IYA-T1-84V" firstAttribute="centerY" secondItem="byh-tX-OoT" secondAttribute="centerY" id="YQD-Ii-OhD"/>
                             <constraint firstItem="cMc-Gk-uVb" firstAttribute="top" secondItem="1gQ-bB-Jw4" secondAttribute="bottom" constant="30" id="iFZ-Xf-gdY"/>
                             <constraint firstItem="QuV-FO-rCz" firstAttribute="bottom" secondItem="bh9-Ga-Jbr" secondAttribute="bottom" constant="168" id="lCk-7t-38h"/>
-=======
-                            <constraint firstItem="IYA-T1-84V" firstAttribute="top" secondItem="1gQ-bB-Jw4" secondAttribute="bottom" constant="283.5" id="4eb-gM-AwE"/>
-                            <constraint firstItem="ONP-cu-3la" firstAttribute="top" secondItem="1gQ-bB-Jw4" secondAttribute="bottom" constant="36" id="BXT-To-hCJ"/>
-                            <constraint firstItem="QuV-FO-rCz" firstAttribute="bottom" secondItem="ONP-cu-3la" secondAttribute="bottom" constant="26" id="Nrl-bL-gmA"/>
-                            <constraint firstItem="QuV-FO-rCz" firstAttribute="trailing" secondItem="1gQ-bB-Jw4" secondAttribute="trailing" constant="38" id="XWa-ld-wAJ"/>
-                            <constraint firstItem="IYA-T1-84V" firstAttribute="centerX" secondItem="byh-tX-OoT" secondAttribute="centerX" id="XZV-hU-qLo"/>
-                            <constraint firstItem="IYA-T1-84V" firstAttribute="centerY" secondItem="byh-tX-OoT" secondAttribute="centerY" id="YQD-Ii-OhD"/>
-                            <constraint firstItem="ONP-cu-3la" firstAttribute="leading" secondItem="QuV-FO-rCz" secondAttribute="leading" constant="35" id="kHr-YW-zoe"/>
->>>>>>> Stashed changes
                             <constraint firstItem="1gQ-bB-Jw4" firstAttribute="leading" secondItem="QuV-FO-rCz" secondAttribute="leading" constant="38" id="ldu-ne-jBC"/>
-                            <constraint firstItem="ONP-cu-3la" firstAttribute="trailing" secondItem="1gQ-bB-Jw4" secondAttribute="trailing" id="wdr-mc-sqp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dWV-da-7V8"/>
@@ -304,11 +265,7 @@
                         <outlet property="newTreeLabel2" destination="CS1-pR-FIf" id="3zv-SG-ycK"/>
                         <outlet property="newTreeTextField" destination="a3g-UV-YDz" id="iWx-py-rjb"/>
                         <outlet property="saveButton" destination="bh9-Ga-Jbr" id="UZM-F8-Oq2"/>
-<<<<<<< Updated upstream
                         <outlet property="segmentedControl" destination="1gQ-bB-Jw4" id="5ov-ni-0Ne"/>
-=======
-                        <outlet property="viewContainer" destination="ONP-cu-3la" id="26N-YO-6uO"/>
->>>>>>> Stashed changes
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdN-BX-qTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
