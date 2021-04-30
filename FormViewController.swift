@@ -7,6 +7,10 @@
 import UIKit
 
 class FormViewController: UIViewController {
+    
+  
+    
+    
 
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet weak var saveButton: UIButton!
@@ -22,6 +26,17 @@ class FormViewController: UIViewController {
         "Take out trash": true
     ]
     
+    @IBAction func switchViewForm(_ sender: UISegmentedControl) {
+        
+    }
+    
+    @IBOutlet weak var viewContainer: UIView!
+    var logActionView: UIView!
+    var newTreeView: UIView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +47,26 @@ class FormViewController: UIViewController {
         
         view.backgroundColor = .systemYellow
         loadData()
+        
+        logActionView = LogActionViewController().view
+        newTreeView = NewTreeViewController().view
+        viewContainer.addSubview(newTreeView)
+        viewContainer.addSubview(logActionView)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func switchViewAction( sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            viewContainer.bringSubviewToFront(logActionView)
+        case 1:
+            viewContainer.bringSubviewToFront(newTreeView)
+        default:
+            break
+        }
     }
     
     func loadData() {
@@ -81,3 +116,5 @@ class FormViewController: UIViewController {
         
     }
 }
+
+

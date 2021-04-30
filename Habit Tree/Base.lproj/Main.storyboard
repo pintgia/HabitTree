@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uag-3w-DJC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uag-3w-DJC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,6 +22,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmc-3W-bec">
+                                <rect key="frame" x="154" y="626" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="See Single Tree"/>
+                                <connections>
+                                    <segue destination="ZW7-HF-e9L" kind="show" id="Dvk-iW-ulY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZsJ-d8-VHD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,20 +47,74 @@
             </objects>
             <point key="canvasLocation" x="-3136" y="842"/>
         </scene>
-        <!--View Controller-->
+        <!--Single Tree View Controller-->
         <scene sceneID="Ctt-c7-lTo">
             <objects>
-                <viewController id="ZW7-HF-e9L" sceneMemberID="viewController">
+                <viewController id="ZW7-HF-e9L" customClass="SingleTreeViewController" customModule="Habit_Tree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="30X-jE-0CM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Individial Tree View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jN-8V-pV7">
+                                <rect key="frame" x="134" y="410.5" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOw-v3-FMx">
+                                <rect key="frame" x="177" y="658" width="84" height="50"/>
+                                <state key="normal" title="Button" image="waterButton">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="waterButtonPressed:" destination="ZW7-HF-e9L" eventType="touchUpInside" id="oLt-mg-6F4"/>
+                                    <segue destination="591-vX-PE7" kind="show" id="FwJ-2r-Ppt"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vNU-iS-hmC">
+                                <rect key="frame" x="55" y="225" width="304" height="392"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="392" id="die-tX-cBk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leafStreakIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Mn0-Fc-2YR">
+                                <rect key="frame" x="44" y="133" width="57" height="69"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kE4-Me-6k2">
+                                <rect key="frame" x="109" y="183" width="42" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="noQ-Ub-8c5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mn0-Fc-2YR" firstAttribute="top" secondItem="noQ-Ub-8c5" secondAttribute="top" constant="133" id="1If-lB-o4n"/>
+                            <constraint firstItem="vNU-iS-hmC" firstAttribute="top" secondItem="Mn0-Fc-2YR" secondAttribute="bottom" constant="23" id="NjP-8A-nAF"/>
+                            <constraint firstItem="vNU-iS-hmC" firstAttribute="centerY" secondItem="30X-jE-0CM" secondAttribute="centerY" id="P0P-VS-OqA"/>
+                            <constraint firstItem="sOw-v3-FMx" firstAttribute="leading" secondItem="noQ-Ub-8c5" secondAttribute="leading" constant="177" id="SwA-lu-owi"/>
+                            <constraint firstItem="0jN-8V-pV7" firstAttribute="centerY" secondItem="30X-jE-0CM" secondAttribute="centerY" id="aeI-au-3fg"/>
+                            <constraint firstItem="sOw-v3-FMx" firstAttribute="top" secondItem="vNU-iS-hmC" secondAttribute="bottom" constant="41" id="cCZ-Fl-vC1"/>
+                            <constraint firstItem="0jN-8V-pV7" firstAttribute="centerX" secondItem="30X-jE-0CM" secondAttribute="centerX" id="cZl-wV-rZG"/>
+                            <constraint firstItem="vNU-iS-hmC" firstAttribute="leading" secondItem="noQ-Ub-8c5" secondAttribute="leading" constant="55" id="dRg-Is-Shh"/>
+                            <constraint firstItem="noQ-Ub-8c5" firstAttribute="trailing" secondItem="sOw-v3-FMx" secondAttribute="trailing" constant="153" id="oSN-bY-SfK"/>
+                            <constraint firstItem="noQ-Ub-8c5" firstAttribute="bottom" secondItem="sOw-v3-FMx" secondAttribute="bottom" constant="100" id="oiL-E7-cV5"/>
+                            <constraint firstItem="vNU-iS-hmC" firstAttribute="centerX" secondItem="30X-jE-0CM" secondAttribute="centerX" id="qKi-lc-JIr"/>
+                            <constraint firstItem="Mn0-Fc-2YR" firstAttribute="leading" secondItem="noQ-Ub-8c5" secondAttribute="leading" constant="44" id="qOL-QT-IwL"/>
+                            <constraint firstItem="noQ-Ub-8c5" firstAttribute="trailing" secondItem="Mn0-Fc-2YR" secondAttribute="trailing" constant="313" id="qTt-fs-dek"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7cc-9h-8al"/>
+                    <connections>
+                        <outlet property="streakCountLabel" destination="kE4-Me-6k2" id="Y2Z-BX-rlr"/>
+                        <outlet property="streakIcon" destination="Mn0-Fc-2YR" id="RbQ-rI-206"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkm-xe-iJO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3136" y="1544"/>
+            <point key="canvasLocation" x="-3155.072463768116" y="1599.7767857142856"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="8O1-wO-30l">
@@ -117,7 +179,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1gQ-bB-Jw4">
-                                <rect key="frame" x="38" y="96.5" width="338" height="32"/>
+                                <rect key="frame" x="38" y="96.5" width="171" height="32"/>
                                 <segments>
                                     <segment title="Log Action"/>
                                     <segment title="New Tree"/>
@@ -183,10 +245,10 @@
                             <constraint firstItem="bh9-Ga-Jbr" firstAttribute="top" secondItem="IYA-T1-84V" secondAttribute="bottom" constant="172.5" id="2ru-TA-O4p"/>
                             <constraint firstItem="IYA-T1-84V" firstAttribute="top" secondItem="1gQ-bB-Jw4" secondAttribute="bottom" constant="283.5" id="4eb-gM-AwE"/>
                             <constraint firstItem="bh9-Ga-Jbr" firstAttribute="leading" secondItem="QuV-FO-rCz" secondAttribute="leading" constant="136" id="FJx-2J-SVX"/>
+                            <constraint firstItem="QuV-FO-rCz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1gQ-bB-Jw4" secondAttribute="trailing" symbolic="YES" id="GW3-Jy-Vuu"/>
                             <constraint firstItem="cMc-Gk-uVb" firstAttribute="leading" secondItem="QuV-FO-rCz" secondAttribute="leading" constant="20" id="Kqu-ob-huB"/>
                             <constraint firstItem="QuV-FO-rCz" firstAttribute="trailing" secondItem="bh9-Ga-Jbr" secondAttribute="trailing" constant="135" id="LhO-o1-e5e"/>
                             <constraint firstItem="IYA-T1-84V" firstAttribute="top" secondItem="cMc-Gk-uVb" secondAttribute="bottom" constant="30" id="Ln0-BO-PXq"/>
-                            <constraint firstItem="QuV-FO-rCz" firstAttribute="trailing" secondItem="1gQ-bB-Jw4" secondAttribute="trailing" constant="38" id="XWa-ld-wAJ"/>
                             <constraint firstItem="IYA-T1-84V" firstAttribute="centerX" secondItem="byh-tX-OoT" secondAttribute="centerX" id="XZV-hU-qLo"/>
                             <constraint firstItem="IYA-T1-84V" firstAttribute="centerY" secondItem="byh-tX-OoT" secondAttribute="centerY" id="YQD-Ii-OhD"/>
                             <constraint firstItem="cMc-Gk-uVb" firstAttribute="top" secondItem="1gQ-bB-Jw4" secondAttribute="bottom" constant="30" id="iFZ-Xf-gdY"/>
@@ -212,9 +274,14 @@
             <point key="canvasLocation" x="-2400" y="952.90178571428567"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FwJ-2r-Ppt"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="leafStreakIcon" width="48" height="48"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="waterButton" width="50" height="50"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
