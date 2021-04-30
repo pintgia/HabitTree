@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uag-3w-DJC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uag-3w-DJC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="S6v-GB-d9w">
             <objects>
                 <viewController id="oi9-Ch-LgM" customClass="HomeViewController" customModule="Habit_Tree" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,6 +30,14 @@
                                     <segue destination="ZW7-HF-e9L" kind="show" id="Dvk-iW-ulY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDi-OU-wCn">
+                                <rect key="frame" x="184" y="552" width="46" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="ATB-y6-pyj" kind="show" id="xkL-Nt-Sif"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZsJ-d8-VHD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,31 +48,31 @@
                             <constraint firstItem="gmc-3W-bec" firstAttribute="centerY" secondItem="IBF-XP-QrK" secondAttribute="centerY" id="nQJ-Ot-V66"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="UL5-e2-WWL"/>
+                    <navigationItem key="navigationItem" id="F1C-6X-OnM"/>
                     <connections>
                         <outlet property="textLabel" destination="py5-5Z-ihd" id="5Ca-2I-zte"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ab3-qb-M0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3136" y="842"/>
+            <point key="canvasLocation" x="-2226.0869565217395" y="841.74107142857144"/>
         </scene>
         <!--Single Tree View Controller-->
         <scene sceneID="Ctt-c7-lTo">
             <objects>
                 <viewController id="ZW7-HF-e9L" customClass="SingleTreeViewController" customModule="Habit_Tree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="30X-jE-0CM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Individial Tree View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jN-8V-pV7">
-                                <rect key="frame" x="134" y="410.5" width="146" height="21"/>
+                                <rect key="frame" x="134" y="437.5" width="146" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOw-v3-FMx">
-                                <rect key="frame" x="177" y="658" width="84" height="50"/>
+                                <rect key="frame" x="177" y="685" width="84" height="28"/>
                                 <state key="normal" title="Button" image="waterButton">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
@@ -73,7 +82,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vNU-iS-hmC">
-                                <rect key="frame" x="55" y="225" width="304" height="392"/>
+                                <rect key="frame" x="55" y="252" width="304" height="392"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="392" id="die-tX-cBk"/>
                                 </constraints>
@@ -99,6 +108,114 @@
             </objects>
             <point key="canvasLocation" x="-3155.072463768116" y="1599.7767857142856"/>
         </scene>
+        <!--Forest View Controller-->
+        <scene sceneID="a5C-Ma-oMP">
+            <objects>
+                <viewController id="ia0-ff-bGq" customClass="ForestViewController" customModule="Habit_Tree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xZN-NI-h4l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qRK-W2-cVz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kMe-rg-S8a">
+                                    <size key="itemSize" width="100" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellID" id="JU4-hm-lIf" customClass="TreeCollectionViewCell" customModule="Habit_Tree" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gmB-A6-Hx5">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xig-22-UjY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="101"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wx-1V-Idd">
+                                                    <rect key="frame" x="29" y="109" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="5Wx-1V-Idd" secondAttribute="bottom" constant="20" id="27c-vi-hgd"/>
+                                                <constraint firstItem="5Wx-1V-Idd" firstAttribute="centerX" secondItem="Xig-22-UjY" secondAttribute="centerX" id="dVu-Tl-u0V"/>
+                                                <constraint firstItem="5Wx-1V-Idd" firstAttribute="centerX" secondItem="gmB-A6-Hx5" secondAttribute="centerX" id="juW-8o-B29"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xig-22-UjY" secondAttribute="trailing" id="moG-Da-xj4"/>
+                                                <constraint firstItem="Xig-22-UjY" firstAttribute="top" secondItem="gmB-A6-Hx5" secondAttribute="top" id="nAK-Uc-CGs"/>
+                                                <constraint firstItem="Xig-22-UjY" firstAttribute="leading" secondItem="gmB-A6-Hx5" secondAttribute="leading" id="p96-rG-6VO"/>
+                                                <constraint firstItem="5Wx-1V-Idd" firstAttribute="top" secondItem="Xig-22-UjY" secondAttribute="bottom" constant="8" id="ph4-YV-MtO"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="treeImageView" destination="Xig-22-UjY" id="wAs-fg-2jG"/>
+                                            <outlet property="treeLabel" destination="5Wx-1V-Idd" id="lBt-uo-fei"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6yG-as-jg0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qRK-W2-cVz" firstAttribute="leading" secondItem="6yG-as-jg0" secondAttribute="leading" id="ONH-DF-Y0Z"/>
+                            <constraint firstItem="qRK-W2-cVz" firstAttribute="top" secondItem="6yG-as-jg0" secondAttribute="top" id="SIz-WN-NhH"/>
+                            <constraint firstItem="6yG-as-jg0" firstAttribute="bottom" secondItem="qRK-W2-cVz" secondAttribute="bottom" id="jtb-1x-r7V"/>
+                            <constraint firstItem="6yG-as-jg0" firstAttribute="trailing" secondItem="qRK-W2-cVz" secondAttribute="trailing" id="yqL-9M-Kl5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UBk-m4-WnD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fHQ-dX-xab">
+                            <connections>
+                                <action selector="onAddTreeButtonPressed:" destination="ia0-ff-bGq" id="r6o-cL-uIE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="qRK-W2-cVz" id="nlF-UB-rEl"/>
+                        <segue destination="X5v-Az-dd2" kind="show" identifier="treeSegue" id="njC-0o-dpN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kab-fw-Hhc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-761" y="1724"/>
+        </scene>
+        <!--Tree Detail View Controller-->
+        <scene sceneID="nOy-q0-gyc">
+            <objects>
+                <viewController id="X5v-Az-dd2" customClass="TreeDetailViewController" customModule="Habit_Tree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0lp-2a-hWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-4f-H14">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6je-j3-XlF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DuW-4f-H14" firstAttribute="top" secondItem="6je-j3-XlF" secondAttribute="top" id="JLI-0H-0xq"/>
+                            <constraint firstItem="6je-j3-XlF" firstAttribute="bottom" secondItem="DuW-4f-H14" secondAttribute="bottom" id="YHV-5b-f17"/>
+                            <constraint firstItem="6je-j3-XlF" firstAttribute="trailing" secondItem="DuW-4f-H14" secondAttribute="trailing" id="arO-Zl-O9p"/>
+                            <constraint firstItem="DuW-4f-H14" firstAttribute="leading" secondItem="6je-j3-XlF" secondAttribute="leading" id="kOg-ot-Dg4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cqt-y8-0jY"/>
+                    <connections>
+                        <outlet property="treeImageView" destination="DuW-4f-H14" id="JFL-zG-jsi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Yx-Ks-OFr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="1724"/>
+        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="8O1-wO-30l">
             <objects>
@@ -110,7 +227,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="oi9-Ch-LgM" kind="relationship" relationship="viewControllers" id="sQI-Yn-MJk"/>
+                        <segue destination="0FK-PP-c6p" kind="relationship" relationship="viewControllers" id="sQI-Yn-MJk"/>
                         <segue destination="ZY5-1s-HaF" kind="relationship" relationship="viewControllers" id="QuR-w9-2za"/>
                         <segue destination="591-vX-PE7" kind="show" identifier="OpenForm" id="67m-Yr-lCH"/>
                     </connections>
@@ -145,24 +262,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uft-U8-oR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1607" y="842"/>
+            <point key="canvasLocation" x="-697.10144927536237" y="841.74107142857144"/>
         </scene>
         <!--Form View Controller-->
         <scene sceneID="wXQ-KL-83b">
             <objects>
                 <viewController id="591-vX-PE7" customClass="FormViewController" customModule="Habit_Tree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="byh-tX-OoT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYA-T1-84V">
-                                <rect key="frame" x="187.5" y="411" width="39.5" height="20.5"/>
+                                <rect key="frame" x="187.5" y="438" width="39.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1gQ-bB-Jw4">
-                                <rect key="frame" x="38" y="96.5" width="171" height="32"/>
+                                <rect key="frame" x="38" y="123.5" width="171" height="32"/>
                                 <segments>
                                     <segment title="Log Action"/>
                                     <segment title="New Tree"/>
@@ -172,7 +289,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh9-Ga-Jbr">
-                                <rect key="frame" x="136" y="604" width="143" height="36"/>
+                                <rect key="frame" x="136" y="631" width="143" height="14"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -182,7 +299,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cMc-Gk-uVb">
-                                <rect key="frame" x="20" y="157.5" width="364" height="223.5"/>
+                                <rect key="frame" x="20" y="184.5" width="364" height="223.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which habit are you contributing to?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vr7-Sm-7p1">
                                         <rect key="frame" x="0.0" y="0.0" width="275.5" height="20.5"/>
@@ -254,7 +371,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdN-BX-qTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="nIA-kz-xp7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2400" y="952.90178571428567"/>
+            <point key="canvasLocation" x="-1489.8550724637682" y="952.90178571428567"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fVl-Nc-v7A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ATB-y6-pyj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="d4L-tH-Ab7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WCr-jR-rd0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ia0-ff-bGq" kind="relationship" relationship="rootViewController" id="C0A-KC-5Jc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8g-pO-dBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1759.4202898550725" y="1723.6607142857142"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="oFM-9C-97h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0FK-PP-c6p" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="UL5-e2-WWL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="abf-XN-T2x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oi9-Ch-LgM" kind="relationship" relationship="rootViewController" id="i4o-j2-NYC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JfN-YK-tGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3136.2318840579715" y="841.74107142857144"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
