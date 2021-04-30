@@ -8,10 +8,15 @@
 import UIKit
 
 class TreeDetailViewController: UIViewController {
-
+    var tree : Tree?
+    
+    @IBOutlet var treeImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let tree = tree{
+            treeImageView.image = UIImage(named: "drop\(tree.currentStage)")
+            title = tree.name
+        }
         // Do any additional setup after loading the view.
     }
     

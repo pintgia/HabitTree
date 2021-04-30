@@ -8,7 +8,8 @@
 import UIKit
 
 class TreeCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet var treeImageView: UIImageView!
+    @IBOutlet var treeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
