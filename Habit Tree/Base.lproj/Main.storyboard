@@ -22,9 +22,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmc-3W-bec">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmc-3W-bec">
                                 <rect key="frame" x="154" y="626" width="107" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="See Single Tree"/>
                                 <connections>
                                     <segue destination="ZW7-HF-e9L" kind="show" id="Dvk-iW-ulY"/>
@@ -35,7 +34,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="py5-5Z-ihd" firstAttribute="centerY" secondItem="IBF-XP-QrK" secondAttribute="centerY" id="HP8-Qg-ebV"/>
+                            <constraint firstItem="gmc-3W-bec" firstAttribute="centerX" secondItem="IBF-XP-QrK" secondAttribute="centerX" id="QIf-Nn-6fb"/>
                             <constraint firstItem="py5-5Z-ihd" firstAttribute="centerX" secondItem="IBF-XP-QrK" secondAttribute="centerX" id="ham-K0-DP0"/>
+                            <constraint firstItem="gmc-3W-bec" firstAttribute="centerY" secondItem="IBF-XP-QrK" secondAttribute="centerY" id="nQJ-Ot-V66"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="UL5-e2-WWL"/>
@@ -77,22 +78,10 @@
                                     <constraint firstAttribute="height" constant="392" id="die-tX-cBk"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leafStreakIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Mn0-Fc-2YR">
-                                <rect key="frame" x="44" y="133" width="57" height="69"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kE4-Me-6k2">
-                                <rect key="frame" x="109" y="183" width="42" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="noQ-Ub-8c5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Mn0-Fc-2YR" firstAttribute="top" secondItem="noQ-Ub-8c5" secondAttribute="top" constant="133" id="1If-lB-o4n"/>
-                            <constraint firstItem="vNU-iS-hmC" firstAttribute="top" secondItem="Mn0-Fc-2YR" secondAttribute="bottom" constant="23" id="NjP-8A-nAF"/>
                             <constraint firstItem="vNU-iS-hmC" firstAttribute="centerY" secondItem="30X-jE-0CM" secondAttribute="centerY" id="P0P-VS-OqA"/>
                             <constraint firstItem="sOw-v3-FMx" firstAttribute="leading" secondItem="noQ-Ub-8c5" secondAttribute="leading" constant="177" id="SwA-lu-owi"/>
                             <constraint firstItem="0jN-8V-pV7" firstAttribute="centerY" secondItem="30X-jE-0CM" secondAttribute="centerY" id="aeI-au-3fg"/>
@@ -102,15 +91,9 @@
                             <constraint firstItem="noQ-Ub-8c5" firstAttribute="trailing" secondItem="sOw-v3-FMx" secondAttribute="trailing" constant="153" id="oSN-bY-SfK"/>
                             <constraint firstItem="noQ-Ub-8c5" firstAttribute="bottom" secondItem="sOw-v3-FMx" secondAttribute="bottom" constant="100" id="oiL-E7-cV5"/>
                             <constraint firstItem="vNU-iS-hmC" firstAttribute="centerX" secondItem="30X-jE-0CM" secondAttribute="centerX" id="qKi-lc-JIr"/>
-                            <constraint firstItem="Mn0-Fc-2YR" firstAttribute="leading" secondItem="noQ-Ub-8c5" secondAttribute="leading" constant="44" id="qOL-QT-IwL"/>
-                            <constraint firstItem="noQ-Ub-8c5" firstAttribute="trailing" secondItem="Mn0-Fc-2YR" secondAttribute="trailing" constant="313" id="qTt-fs-dek"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7cc-9h-8al"/>
-                    <connections>
-                        <outlet property="streakCountLabel" destination="kE4-Me-6k2" id="Y2Z-BX-rlr"/>
-                        <outlet property="streakIcon" destination="Mn0-Fc-2YR" id="RbQ-rI-206"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkm-xe-iJO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,7 +262,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="leafStreakIcon" width="48" height="48"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="waterButton" width="50" height="50"/>
         <systemColor name="labelColor">

@@ -9,7 +9,6 @@ import UIKit
 
 class SingleTreeViewController: UIViewController {
     
-    @IBOutlet weak var streakIcon: UIImageView!
     @IBOutlet weak var streakCountLabel: UILabel!
     var streakCount = 0
     

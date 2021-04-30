@@ -50,8 +50,8 @@ class FormViewController: UIViewController {
         
         logActionView = LogActionViewController().view
         newTreeView = NewTreeViewController().view
-        viewContainer.addSubview(newTreeView)
-        viewContainer.addSubview(logActionView)
+        viewContainer?.addSubview(newTreeView)
+        viewContainer?.addSubview(logActionView)
     }
     
     override func didReceiveMemoryWarning() {
