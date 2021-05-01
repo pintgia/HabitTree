@@ -47,6 +47,8 @@ class TreeDetailViewController: UIViewController {
         }))
         
         logAlert.addAction(UIAlertAction(title: "Yes!", style: .default, handler: { action in
+            self.tree?.currentStage += 1
+            self.treeImageView.image = UIImage(named: "drop\(self.tree!.currentStage)")
             print("log alert action confirmed!")
 
         }))

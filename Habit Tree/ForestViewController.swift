@@ -19,15 +19,20 @@ class ForestViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        loadData()
+       // let data = DataManager.readData(read: Data  )
         
         
         
-        
-        // Do any additional setup after loading the view.
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        saveTrees(trees: trees)
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return trees.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,8 +66,8 @@ class ForestViewController: UIViewController, UICollectionViewDelegate, UICollec
                 let tree = Tree(id: self.trees.count, name: treeName, currentStage: 0, totalStages: 5, habitStreak: false)
                 //self.trees.append(tree)
                 
-            
                 self.trees.append(tree)
+                self.saveTrees(trees: self.trees)
                 self.collectionView.reloadData()
                 
                 
@@ -80,6 +85,23 @@ class ForestViewController: UIViewController, UICollectionViewDelegate, UICollec
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
         
+    }
+    
+    func saveTrees(trees:[Tree]) {
+        
+        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: trees)
+        DataManager.shared.createData(new: "trees", of: encodedData)
+        loadData()
+    }
+    
+    func loadData() {
+        let savedData = DataManager.shared.readData(of: "trees")
+        if let data = savedData {
+            let decoded = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as! [Tree]
+            trees = decoded
+            collectionView.reloadData()
+            print(decoded)
+        }
     }
     
     var selectedTree: Tree?

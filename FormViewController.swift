@@ -77,7 +77,7 @@ class FormViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
-        DataManager.shared.createData(new: treeName, of: action)
+   //     DataManager.shared.createData(new: treeName, of: action)
     }
 
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
@@ -99,6 +99,7 @@ class FormViewController: UIViewController {
         }
         
     }
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! HomeViewController
         if segmentedControl.selectedSegmentIndex == 0{
