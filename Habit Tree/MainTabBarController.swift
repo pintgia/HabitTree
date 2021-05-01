@@ -42,6 +42,9 @@ class MainTabBarController: UITabBarController {
             // allows to set images to buttons
             addButton.setImage(buttonImage, for: .normal)
             
+            //set color of plus button
+            addButton.tintColor = .systemBlue
+            
             // adding a gesture recognizer (for taps)
             addButton.addTarget(self, action: #selector(handleButtonTap), for: .touchUpInside)
             

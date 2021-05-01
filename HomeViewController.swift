@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = #colorLiteral(red: 0.6664150357, green: 0.7777772546, blue: 0.5816738009, alpha: 1)
         
         // Do any additional setup after loading the view.
     }

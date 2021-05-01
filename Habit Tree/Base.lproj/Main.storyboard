@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uag-3w-DJC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uag-3w-DJC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -23,13 +23,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmc-3W-bec">
-                                <rect key="frame" x="154" y="626" width="107" height="30"/>
-                                <state key="normal" title="See Single Tree"/>
-                                <connections>
-                                    <segue destination="ZW7-HF-e9L" kind="show" id="Dvk-iW-ulY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDi-OU-wCn">
                                 <rect key="frame" x="184" y="552" width="46" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -43,9 +36,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="py5-5Z-ihd" firstAttribute="centerY" secondItem="IBF-XP-QrK" secondAttribute="centerY" id="HP8-Qg-ebV"/>
-                            <constraint firstItem="gmc-3W-bec" firstAttribute="centerX" secondItem="IBF-XP-QrK" secondAttribute="centerX" id="QIf-Nn-6fb"/>
                             <constraint firstItem="py5-5Z-ihd" firstAttribute="centerX" secondItem="IBF-XP-QrK" secondAttribute="centerX" id="ham-K0-DP0"/>
-                            <constraint firstItem="gmc-3W-bec" firstAttribute="centerY" secondItem="IBF-XP-QrK" secondAttribute="centerY" id="nQJ-Ot-V66"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F1C-6X-OnM"/>
@@ -55,58 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ab3-qb-M0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2226.0869565217395" y="841.74107142857144"/>
-        </scene>
-        <!--Single Tree View Controller-->
-        <scene sceneID="Ctt-c7-lTo">
-            <objects>
-                <viewController id="ZW7-HF-e9L" customClass="SingleTreeViewController" customModule="Habit_Tree" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="30X-jE-0CM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Individial Tree View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jN-8V-pV7">
-                                <rect key="frame" x="134" y="437.5" width="146" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOw-v3-FMx">
-                                <rect key="frame" x="177" y="685" width="84" height="28"/>
-                                <state key="normal" title="Button" image="waterButton">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                                <connections>
-                                    <action selector="waterButtonPressed:" destination="ZW7-HF-e9L" eventType="touchUpInside" id="oLt-mg-6F4"/>
-                                    <segue destination="591-vX-PE7" kind="show" id="FwJ-2r-Ppt"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vNU-iS-hmC">
-                                <rect key="frame" x="55" y="252" width="304" height="392"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="392" id="die-tX-cBk"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="noQ-Ub-8c5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="vNU-iS-hmC" firstAttribute="centerY" secondItem="30X-jE-0CM" secondAttribute="centerY" id="P0P-VS-OqA"/>
-                            <constraint firstItem="sOw-v3-FMx" firstAttribute="leading" secondItem="noQ-Ub-8c5" secondAttribute="leading" constant="177" id="SwA-lu-owi"/>
-                            <constraint firstItem="0jN-8V-pV7" firstAttribute="centerY" secondItem="30X-jE-0CM" secondAttribute="centerY" id="aeI-au-3fg"/>
-                            <constraint firstItem="sOw-v3-FMx" firstAttribute="top" secondItem="vNU-iS-hmC" secondAttribute="bottom" constant="41" id="cCZ-Fl-vC1"/>
-                            <constraint firstItem="0jN-8V-pV7" firstAttribute="centerX" secondItem="30X-jE-0CM" secondAttribute="centerX" id="cZl-wV-rZG"/>
-                            <constraint firstItem="vNU-iS-hmC" firstAttribute="leading" secondItem="noQ-Ub-8c5" secondAttribute="leading" constant="55" id="dRg-Is-Shh"/>
-                            <constraint firstItem="noQ-Ub-8c5" firstAttribute="trailing" secondItem="sOw-v3-FMx" secondAttribute="trailing" constant="153" id="oSN-bY-SfK"/>
-                            <constraint firstItem="noQ-Ub-8c5" firstAttribute="bottom" secondItem="sOw-v3-FMx" secondAttribute="bottom" constant="100" id="oiL-E7-cV5"/>
-                            <constraint firstItem="vNU-iS-hmC" firstAttribute="centerX" secondItem="30X-jE-0CM" secondAttribute="centerX" id="qKi-lc-JIr"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="7cc-9h-8al"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zkm-xe-iJO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3155.072463768116" y="1599.7767857142856"/>
+            <point key="canvasLocation" x="-2323" y="891"/>
         </scene>
         <!--Forest View Controller-->
         <scene sceneID="a5C-Ma-oMP">
@@ -244,8 +184,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEy-jn-fM3">
-                                <rect key="frame" x="184" y="437.5" width="46" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecO-ne-ZOm">
+                                <rect key="frame" x="66" y="208" width="283" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TyC-vs-Txz">
+                                <rect key="frame" x="66" y="354" width="283" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version: 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzi-J6-8Fv">
+                                <rect key="frame" x="145" y="144" width="124" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -253,12 +202,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qqd-Hx-hdR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="eEy-jn-fM3" firstAttribute="centerY" secondItem="G9G-qt-Ihw" secondAttribute="centerY" id="9On-3J-Teo"/>
-                            <constraint firstItem="eEy-jn-fM3" firstAttribute="centerX" secondItem="G9G-qt-Ihw" secondAttribute="centerX" id="wn1-iy-gW5"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="person.2.fill" catalog="system" id="7XZ-EF-jeu"/>
+                    <connections>
+                        <outlet property="aboutLogo" destination="ecO-ne-ZOm" id="oqZ-nV-Ilq"/>
+                        <outlet property="aboutLogoText" destination="TyC-vs-Txz" id="Env-T4-ACW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uft-U8-oR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,17 +218,17 @@
             <objects>
                 <viewController id="591-vX-PE7" customClass="FormViewController" customModule="Habit_Tree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="byh-tX-OoT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYA-T1-84V">
-                                <rect key="frame" x="187.5" y="438" width="39.5" height="20.5"/>
+                                <rect key="frame" x="187.5" y="411" width="39.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1gQ-bB-Jw4">
-                                <rect key="frame" x="38" y="123.5" width="171" height="32"/>
+                                <rect key="frame" x="38" y="96.5" width="171" height="32"/>
                                 <segments>
                                     <segment title="Log Action"/>
                                     <segment title="New Tree"/>
@@ -289,7 +238,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh9-Ga-Jbr">
-                                <rect key="frame" x="136" y="631" width="143" height="14"/>
+                                <rect key="frame" x="136" y="604" width="143" height="36"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -299,7 +248,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cMc-Gk-uVb">
-                                <rect key="frame" x="20" y="184.5" width="364" height="223.5"/>
+                                <rect key="frame" x="20" y="157.5" width="364" height="223.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which habit are you contributing to?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vr7-Sm-7p1">
                                         <rect key="frame" x="0.0" y="0.0" width="275.5" height="20.5"/>
@@ -412,13 +361,9 @@
             <point key="canvasLocation" x="-3136.2318840579715" y="841.74107142857144"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="FwJ-2r-Ppt"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
-        <image name="waterButton" width="50" height="50"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

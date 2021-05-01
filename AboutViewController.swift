@@ -9,10 +9,18 @@ import UIKit
 
 class AboutViewController: UIViewController {
 
+    @IBOutlet weak var aboutLogoText: UIImageView!
+    @IBOutlet weak var aboutLogo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBlue
+        aboutLogo.image = UIImage(named: "logoMain")
+        aboutLogoText.image = UIImage(named: "logoText")
+        
+        
+        
+        view.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         
 
     }
