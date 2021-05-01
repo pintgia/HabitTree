@@ -46,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ab3-qb-M0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1759" y="841"/>
+            <point key="canvasLocation" x="-3449" y="842"/>
         </scene>
         <!--Forest View Controller-->
         <scene sceneID="a5C-Ma-oMP">
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kab-fw-Hhc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-761" y="1724"/>
+            <point key="canvasLocation" x="-4249" y="1665"/>
         </scene>
         <!--Tree Detail View Controller-->
         <scene sceneID="nOy-q0-gyc">
@@ -134,39 +134,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-4f-H14">
-                                <rect key="frame" x="0.0" y="88" width="414" height="612"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-4f-H14">
+                                <rect key="frame" x="0.0" y="88" width="414" height="635"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG6-hF-tZw">
-                                <rect key="frame" x="160" y="721" width="95" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="9"/>
-                                <state key="normal" title="Log Action">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olP-Dw-eer">
+                                <rect key="frame" x="170" y="756" width="74" height="30"/>
+                                <state key="normal" title="Log Action"/>
                                 <connections>
-                                    <action selector="onLogButtonPressed:" destination="X5v-Az-dd2" eventType="touchUpInside" id="wvJ-fp-XFJ"/>
+                                    <action selector="logButtonPressed:" destination="X5v-Az-dd2" eventType="touchUpInside" id="zyx-gV-vd9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6je-j3-XlF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6je-j3-XlF" firstAttribute="bottom" secondItem="DuW-4f-H14" secondAttribute="bottom" constant="90" id="0sn-WG-2R9"/>
+                            <constraint firstItem="olP-Dw-eer" firstAttribute="centerX" secondItem="DuW-4f-H14" secondAttribute="centerX" id="Iek-2v-E2a"/>
                             <constraint firstItem="DuW-4f-H14" firstAttribute="top" secondItem="6je-j3-XlF" secondAttribute="top" id="JLI-0H-0xq"/>
-                            <constraint firstItem="6je-j3-XlF" firstAttribute="bottom" secondItem="DuW-4f-H14" secondAttribute="bottom" id="YHV-5b-f17"/>
+                            <constraint firstItem="olP-Dw-eer" firstAttribute="top" secondItem="DuW-4f-H14" secondAttribute="bottom" constant="33" id="SUA-YZ-J2n"/>
                             <constraint firstItem="6je-j3-XlF" firstAttribute="trailing" secondItem="DuW-4f-H14" secondAttribute="trailing" id="arO-Zl-O9p"/>
                             <constraint firstItem="DuW-4f-H14" firstAttribute="leading" secondItem="6je-j3-XlF" secondAttribute="leading" id="kOg-ot-Dg4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cqt-y8-0jY"/>
                     <connections>
-                        <outlet property="logButton" destination="ZG6-hF-tZw" id="3fs-QR-qqi"/>
+                        <outlet property="logButton" destination="olP-Dw-eer" id="2zu-02-NNe"/>
+                        <outlet property="logButtonPressed" destination="olP-Dw-eer" id="GIU-bT-XIY"/>
                         <outlet property="treeImageView" destination="DuW-4f-H14" id="JFL-zG-jsi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yx-Ks-OFr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.681159420289859" y="1723.6607142857142"/>
+            <point key="canvasLocation" x="-3526.0869565217395" y="1664.7321428571429"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="8O1-wO-30l">
@@ -222,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uft-U8-oR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-697.10144927536237" y="841.74107142857144"/>
+            <point key="canvasLocation" x="-2580" y="842"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fVl-Nc-v7A">
@@ -241,7 +240,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8g-pO-dBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1759.4202898550725" y="1723.6607142857142"/>
+            <point key="canvasLocation" x="-4129" y="928"/>
         </scene>
         <!--Home-->
         <scene sceneID="oFM-9C-97h">
@@ -260,7 +259,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfN-YK-tGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3136.2318840579715" y="841.74107142857144"/>
+            <point key="canvasLocation" x="-3159" y="117"/>
         </scene>
     </scenes>
     <resources>

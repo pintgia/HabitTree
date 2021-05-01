@@ -10,25 +10,54 @@ import UIKit
 class TreeDetailViewController: UIViewController {
     var tree : Tree?
     
+    
+    @IBOutlet weak var logButton: UIButton!
     @IBOutlet var treeImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         if let tree = tree{
             treeImageView.image = UIImage(named: "drop\(tree.currentStage)")
             title = tree.name
         }
-        // Do any additional setup after loading the view.
+        
+        
+        
+        logButton.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onLogButtonPressed(_ sender: Any) {
+        showAlert()
     }
-    */
+    
+    func showAlert() {
+        let logAlert = UIAlertController(title: "Did you complete an action?", message: nil, preferredStyle: .alert)
+        
+        logAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+            print("log alert cancelled")
+
+        }))
+        
+        logAlert.addAction(UIAlertAction(title: "Yes!", style: .default, handler: { action in
+            print("log alert action confirmed!")
+
+        }))
+        
+        present(logAlert, animated: true)
+        
+        
+        
+    }
+    
+    func showActionSheet(){
+        
+    }
+    
+    
 
 }
