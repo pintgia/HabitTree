@@ -35,9 +35,12 @@ class TreeDetailViewController: UIViewController {
         showAlert()
     }
     
+    // create alert for log action button
     func showAlert() {
+        //creates alert box
         let logAlert = UIAlertController(title: "Did you complete an action?", message: nil, preferredStyle: .alert)
         
+        //creates alert button
         logAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
             print("log alert cancelled")
 
@@ -51,10 +54,6 @@ class TreeDetailViewController: UIViewController {
         present(logAlert, animated: true)
         
         
-        
-    }
-    
-    func showActionSheet(){
         
     }
     

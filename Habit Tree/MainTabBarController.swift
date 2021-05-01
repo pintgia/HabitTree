@@ -43,7 +43,7 @@ class MainTabBarController: UITabBarController {
             addButton.setImage(buttonImage, for: .normal)
             
             //set color of plus button
-            addButton.tintColor = .systemBlue
+            addButton.tintColor = #colorLiteral(red: 0.9615374207, green: 0.9123803973, blue: 0.6930432916, alpha: 1)
             
             // adding a gesture recognizer (for taps)
             addButton.addTarget(self, action: #selector(handleButtonTap), for: .touchUpInside)
@@ -55,7 +55,8 @@ class MainTabBarController: UITabBarController {
     @objc func handleButtonTap() {
         
         //Must match the name matches  what I have named it in the story board
-        performSegue(withIdentifier: "OpenForm", sender: self)
+        performSegue(withIdentifier: "ShowForestView", sender: self)
+        //performSegue(withIdentifier: "ShowNavController", sender: self)
     }
         
         

@@ -20,7 +20,7 @@ class AboutViewController: UIViewController {
         
         
         
-        view.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.3377660665, green: 0.5844975222, blue: 0.6576585076, alpha: 1)
         
 
     }

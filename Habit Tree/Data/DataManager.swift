@@ -9,6 +9,7 @@ import Foundation
 
 
 
+
 struct Tree {
     // CS: There are referred to as "tables" or "models" in database vernacular
     // Make sure each models have ids
@@ -20,7 +21,7 @@ struct Tree {
     var habitStreak: Bool
 }
 
-var treeList: [Tree] = []
+
 
 
 struct habitStreak {
@@ -58,5 +59,12 @@ class DataManager {
         store.removeObject(forKey: key)
         print("Deleted key \(key)!")
     }
+    
+    /*
+    struct treeCollection{
+        static var treeList: [Tree] = []
+    }
+    */
+    
     
 }
