@@ -18,16 +18,15 @@ class TreeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.1898124784, green: 0.540225828, blue: 0.8221012682, alpha: 1)
+        
+        logButton.layer.cornerRadius = 10
+        logButton.backgroundColor = #colorLiteral(red: 0.746868968, green: 0.6847620606, blue: 0.5067369342, alpha: 1)
+        
         if let tree = tree{
             treeImageView.image = UIImage(named: "drop\(tree.currentStage)")
             title = tree.name
         }
-        
-        
-        
-        logButton.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        
         
     }
     
