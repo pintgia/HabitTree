@@ -16,7 +16,6 @@
 		6C180A2426094A3B00C33DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C180A2226094A3B00C33DAF /* Main.storyboard */; };
 		6C180A2626094A3C00C33DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C180A2526094A3C00C33DAF /* Assets.xcassets */; };
 		6C180A2926094A3C00C33DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C180A2726094A3C00C33DAF /* LaunchScreen.storyboard */; };
-		6C6B1E672633A73200B9087C /* SingleTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B1E662633A73200B9087C /* SingleTreeViewController.swift */; };
 		6CB895EF263275C700BB30F0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB895EE263275C700BB30F0 /* MainTabBarController.swift */; };
 		6CB895F3263278ED00BB30F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB895F2263278ED00BB30F0 /* HomeViewController.swift */; };
 		6CB895F62632792300BB30F0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB895F52632792300BB30F0 /* AboutViewController.swift */; };
@@ -38,7 +37,6 @@
 		6C180A2526094A3C00C33DAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C180A2826094A3C00C33DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C180A2A26094A3C00C33DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6C6B1E662633A73200B9087C /* SingleTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTreeViewController.swift; sourceTree = "<group>"; };
 		6CB895EE263275C700BB30F0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		6CB895F2263278ED00BB30F0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6CB895F52632792300BB30F0 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				6CB895F2263278ED00BB30F0 /* HomeViewController.swift */,
 				6CB895F52632792300BB30F0 /* AboutViewController.swift */,
 				6CB89600263289FE00BB30F0 /* FormViewController.swift */,
-				6C6B1E662633A73200B9087C /* SingleTreeViewController.swift */,
 				6C180A1A26094A3B00C33DAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -200,7 +197,6 @@
 				6CB89601263289FE00BB30F0 /* FormViewController.swift in Sources */,
 				3F4902AE263CA45C00C61ADD /* ForestViewController.swift in Sources */,
 				6C180A2126094A3B00C33DAF /* ViewController.swift in Sources */,
-				6C6B1E672633A73200B9087C /* SingleTreeViewController.swift in Sources */,
 				6CB8960B26328C6C00BB30F0 /* DataManager.swift in Sources */,
 				6CB8961626329DFB00BB30F0 /* NewTreeViewController.swift in Sources */,
 				6C180A1D26094A3B00C33DAF /* AppDelegate.swift in Sources */,
@@ -362,7 +358,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "gianpinto.Habit-Tree";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -383,7 +379,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "gianpinto.Habit-Tree";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

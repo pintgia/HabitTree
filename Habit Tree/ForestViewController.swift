@@ -9,7 +9,9 @@ import UIKit
 
 class ForestViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var trees = [Tree]()
+    var homeVC : HomeViewController? = nil
+    //var trees = [Tree]()
+    var trees = DataManager.shared.trees
 
     @IBOutlet var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -19,17 +21,15 @@ class ForestViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        loadData()
        // let data = DataManager.readData(read: Data  )
-        
-        
         
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        saveTrees(trees: trees)
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+       // saveTrees(trees: trees)
+        collectionView.reloadData()
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return trees.count
@@ -39,8 +39,27 @@ class ForestViewController: UIViewController, UICollectionViewDelegate, UICollec
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellID", for: indexPath) as! TreeCollectionViewCell
         let tree = trees[indexPath.row]
         
-        
-        cell.treeImageView.image = UIImage(named: "tree\(tree.currentStage)")
+        switch tree.currentStage {
+        case 0 :
+            cell.treeImageView.image = UIImage(named: "drop0")
+        case 1...3 :
+            cell.treeImageView.image = UIImage(named: "drop1")
+        case 4...8 :
+            cell.treeImageView.image = UIImage(named: "drop2")
+        case 9...13 :
+            cell.treeImageView.image = UIImage(named: "drop3")
+        case 14...18 :
+            cell.treeImageView.image = UIImage(named: "drop4")
+        case 19...24 :
+            cell.treeImageView.image = UIImage(named: "drop5")
+        case 25...28 :
+            cell.treeImageView.image = UIImage(named: "drop6")
+        case 29 :
+            cell.treeImageView.image = UIImage(named: "drop7")
+            // congrats screen
+        default :
+            cell.treeImageView.image = UIImage(named: "drop7")
+        }
         cell.treeLabel.text = tree.name
         return cell
     }
@@ -67,7 +86,7 @@ class ForestViewController: UIViewController, UICollectionViewDelegate, UICollec
                 //self.trees.append(tree)
                 
                 self.trees.append(tree)
-                self.saveTrees(trees: self.trees)
+                DataManager.shared.saveTrees(trees: self.trees)
                 self.collectionView.reloadData()
                 
                 
@@ -87,13 +106,8 @@ class ForestViewController: UIViewController, UICollectionViewDelegate, UICollec
         
     }
     
-    func saveTrees(trees:[Tree]) {
-        
-        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: trees)
-        DataManager.shared.createData(new: "trees", of: encodedData)
-        loadData()
-    }
     
+    /*
     func loadData() {
         let savedData = DataManager.shared.readData(of: "trees")
         if let data = savedData {
@@ -103,6 +117,7 @@ class ForestViewController: UIViewController, UICollectionViewDelegate, UICollec
             print(decoded)
         }
     }
+    */
     
     var selectedTree: Tree?
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

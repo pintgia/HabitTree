@@ -53,23 +53,30 @@ class Tree: NSObject, NSCoding {
 }
 
 
-
-
 struct habitStreak {
     var streakCount: Int
 }
-
-struct Action: Hashable {
-    var id: Int
-    var note: String
-}
-
 
 class DataManager {
     
     // CS: This is referred to as a "singleton", a class that is instatiated ONE time only in the lifecycle of the application
     static let shared = DataManager()
     let store = UserDefaults.standard
+    
+    var trees = [Tree]()
+    init(){
+        let savedData = readData(of: "trees")
+        if let data = savedData {
+            let decoded = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as! [Tree]
+            trees = decoded
+            print(decoded)
+        }
+    }
+    
+    func saveTrees(trees:[Tree]) {
+        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: trees)
+        DataManager.shared.createData(new: "trees", of: encodedData)
+    }
     
     // Peep the function arguments, in Swift there are "internal" and "external" function argument names
     func createData(new key: String, of value: Data) {
