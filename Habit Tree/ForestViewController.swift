@@ -124,7 +124,9 @@ class ForestViewController: UIViewController, UICollectionViewDelegate, UICollec
         selectedTree = trees[indexPath.row]
         performSegue(withIdentifier: "treeSegue", sender: nil)
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        homeVC?.updateUI()
+    }
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! TreeDetailViewController
